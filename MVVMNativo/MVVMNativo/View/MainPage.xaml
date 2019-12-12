@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MVVMNativo.View.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout Spacing="15" HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="User Name" FontSize="16"></Label>
+            <Entry Text="{Binding Model.UserName, Mode=TwoWay}" FontSize="14"></Entry>
+            <Label Text="Password" FontSize="16"></Label>
+            <Entry Text="{Binding Model.Password, Mode=TwoWay}" FontSize="14"></Entry>
+            <Button Text="Login" FontSize="17" Command="{Binding Model.CmdLogin}"></Button>
+
+            <CollectionView ItemsSource="{Binding Model.LstFruits.Result}"></CollectionView>
+        
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
